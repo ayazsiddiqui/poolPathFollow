@@ -1,5 +1,5 @@
-function val = calcNormalizedPathCoords(pathWidth,pathHeight,pathElevation,...
-    pathParameter)
+function val = calcNormalizedPathCoords(pathParameter,...
+    pathWidth,pathHeight,pathElevation)
 %CALCNORMALIZEDPATHCOORDS(pathWidth,pathHeight,pathElevation,pathParameter)
 % Calculate inerital path co-ordinates
 % Inputs:   pathWidth - Path width [deg]
