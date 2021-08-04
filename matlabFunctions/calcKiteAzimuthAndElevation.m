@@ -7,7 +7,7 @@ function [azimuth,elevation] = calcKiteAzimuthAndElevation(kitePos)
 %               elevation - Elevation angle [rad]
 
 % normalize
-kitePos = norm(kitePos);
+kitePos = kitePos./norm(kitePos);
 % calculate azimuth
 azimuth = atan(kitePos(2)/kitePos(1));
 % calculate elevation

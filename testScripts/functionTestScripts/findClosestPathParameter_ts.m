@@ -33,9 +33,27 @@ sTarget = sClosest + Lforward;
 rTarget = calcNormalizedPathCoords(sTarget,pathWidth,pathHeight,pathElev);
 pTarget = plot3(rTarget(1,:),rTarget(2,:),rTarget(3,:),'m*');
 
+%% test turn angle calulation
+rTarg_kite = rTarget - kitePos;
+rTarg_kite = rTarg_kite./norm(rTarg_kite);
+% dummy velocity
+kiteVel = rTarg_kite + 0.5*rand(3,1);
+kiteVel = kiteVel./norm(kiteVel);
+% calc turn angle
+turnAng = calcTurnAngleInTangentFrame(kitePos,kiteVel,rTarget);
+
+% plot line that connects kite position to target
+prTarg_kite = plot3([kitePos(1) rTarget(1)],...
+    [kitePos(2) rTarget(2)],...
+    [kitePos(3) rTarget(3)]);
+
+pVel = quiver3(kitePos(1,:),kitePos(2,:),kitePos(3,:),...
+    kiteVel(1),kiteVel(2),kiteVel(3),0.2);
+
 % legends
-lgd = legend([pKite,pClosest,pTarget],...
-    {'Kite position','Calculated closest point','Target point'},...
+lgd = legend([pKite,pClosest,pTarget,prTarg_kite,pVel],...
+    {'Kite position','Calculated closest point','Target point',...
+    'Target vector','Velocity direction'},...
     'Position',[0.7169 0.7388 0.0919 0.0346]);
 
 
