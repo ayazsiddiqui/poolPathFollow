@@ -12,8 +12,8 @@ kitePathParam = 0.1 + 0.6*rand;
 kitePos = calcNormalizedPathCoords(pathWidth,pathHeight,pathElev,kitePathParam) + 0.05*rand(3,1);
 
 % find closest path parameter
-sClosest = findClosestPathParameter(initPathParam,pathWidth,pathHeight,...
-    pathElev,kitePos);
+sClosest = findClosestPathParameter(initPathParam,kitePos,pathWidth,pathHeight,...
+    pathElev);
 rClosest = calcNormalizedPathCoords(pathWidth,pathHeight,pathElev,sClosest);
 
 %% plot stuff
