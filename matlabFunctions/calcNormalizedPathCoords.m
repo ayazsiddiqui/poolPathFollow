@@ -2,11 +2,11 @@ function val = calcNormalizedPathCoords(pathWidth,pathHeight,pathElevation,...
     pathParameter)
 %CALCNORMALIZEDPATHCOORDS(pathWidth,pathHeight,pathElevation,pathParameter)
 % Calculate inerital path co-ordinates
-% Inputs:   Path width [deg]
-%           Path height [deg]
-%           Path elevation [deg]
-%           Path parameter,s where 0 < s < 2*pi for 1 lap
-% Outputs:  Path co-ordinates in inertial frame - x, y, and z such that
+% Inputs:   pathWidth - Path width [deg]
+%           pathHeight - Path height [deg]
+%           pathElevation - Path elevation [deg]
+%           pathParameter - Path parameter,s where 0 < s < 2*pi for 1 lap
+% Output:   Path co-ordinates in inertial frame - x, y, and z such that
 % sqrt(x^2 + y^2 + z^2) = 1
 
 %% dummy variables with shorter names

@@ -8,6 +8,6 @@ pathHeight  = 12;
 pathElev    = 30;
 pathParam   = linspace(0,1,501)*2*pi;
 
-plotDome(1);
+plotDome(1,15);
 rPath = calcNormalizedPathCoords(pathWidth,pathHeight,pathElev,pathParam);
 plot3(rPath(1,:),rPath(2,:),rPath(3,:),'k-');

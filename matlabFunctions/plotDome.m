@@ -1,10 +1,21 @@
-function plotDome(radius)
-%PLOTDOME Plots dome with dotted longitude and latitude lines
-% Inputs: Dome radius in meters
-% Longitude lines plotted between -90 and 90
-% Latitude lines plotted at 0 and 90
+function plotDome(radius,stepSize)
+%PLOTDOME(radius,stepSize)
+% Plots dome with dotted longitude and latitude lines
+% Inputs:   radius - Dome radius [m]
+%           stepSize - Separation between latitude and longitude lines [deg]
+% Notes:
+% Longitude lines are plotted between -90 and 90
+% Latitude lines are plotted at 0 and 90
 
-% get constants
+% parse inputs
+switch nargin
+    case 0
+        radius = 1;
+        stepSize = 15;
+    case 1
+        stepSize = 15;
+end
+% dummy variables
 r = radius;
 linWidth = 0.25;
 lnType = ':';
@@ -13,7 +24,6 @@ grayRGB = 191/255.*[1 1 1];
 longFine = -90:1:90;
 latFine = -0:1:90;
 % make longitude and latitude coarse grids
-stepSize = 15;
 longCoarse = longFine(1):stepSize:longFine(end);
 latCoarse = latFine(1):stepSize:latFine(end);
 % plot longitude lines
@@ -32,6 +42,8 @@ for ii = 1:numel(latCoarse)
     plot3(X,Y,Z,lnType,'linewidth',linWidth,'color',grayRGB);
 end
 % set view angle
-view(110,20); axis equal;
+view(110,20);
+% make axes equal
+axis equal;
 
 end
