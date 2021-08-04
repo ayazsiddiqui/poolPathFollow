@@ -19,12 +19,12 @@ a = 0.5*w;
 b = (1/(2*sqrt(2)))*sqrt(-w^2+sqrt((h^2*(4+h^2)*w^4))/(h^2));
 
 % equation for path azimuth
-AZ = -(a*sin(s))/(1 + (((a/b)^2)*cos(s)^2));
+AZ = -(a*sin(s))./(1 + (((a/b)^2)*cos(s).^2));
 % equation for path elevation
-EL = e - (((a/b)^2)*sin(s)*cos(s))/(1 + (((a/b)^2)*cos(s)^2));
+EL = e - (((a/b)^2)*sin(s).*cos(s))./(1 + (((a/b)^2)*cos(s).^2));
 
 % equation for normalized path position
-val = simplify([cos(AZ)*cos(EL); sin(AZ)*cos(EL); sin(EL)]);
+val = [cos(AZ).*cos(EL); sin(AZ).*cos(EL); sin(EL)];
 
 
 end
