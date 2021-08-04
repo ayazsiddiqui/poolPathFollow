@@ -1,5 +1,6 @@
 function [azimuth,elevation] = calcKiteAzimuthAndElevation(kitePos)
 %CALCKITEAZIMUTHANDELEVATION(kitePos) Calculate kite azimuth and elevation
+% 
 %   Input:      kitePos - Kite position vector in inertial frame [m]
 %
 %   Outputs:    azimuth - Azimuth angle [rad]
