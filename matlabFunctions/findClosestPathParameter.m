@@ -1,5 +1,5 @@
-function sClosest = findClosestPathParameter(initPathParam,pathWidth,pathHeight,...
-    pathElevation,kitePos)
+function sClosest = findClosestPathParameter(initPathParam,kitePos,...
+    pathWidth,pathHeight,pathElevation)
 %FINDCLOSESTPATHPARAMETER(initPathParam,pathWidth,pathHeight,pathElevation,kitePos)
 % Find the closest path parameter using Newton's minimization method
 % Theoretically, this function should find the answer in one iteration
