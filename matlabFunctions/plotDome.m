@@ -31,4 +31,7 @@ for ii = 1:numel(latCoarse)
     Z = r*sind(latCoarse(ii))*ones(size(longFine));
     plot3(X,Y,Z,lnType,'linewidth',linWidth,'color',grayRGB);
 end
+% set view angle
+view(110,20); axis equal;
+
 end
