@@ -1,6 +1,7 @@
 function sClosest = findClosestPathParameter(initPathParam,kitePos,...
     pathWidth,pathHeight,pathElevation)
 %FINDCLOSESTPATHPARAMETER(initPathParam,pathWidth,pathHeight,pathElevation,kitePos)
+% 
 % Find the closest path parameter using Newton's minimization method
 % Theoretically, this function should find the answer in one iteration
 % because the cost function is quadratic, but I haven't verified that yet,
