@@ -1,6 +1,7 @@
 function val = calcNormalizedPathCoords(pathWidth,pathHeight,pathElevation,...
     pathParameter)
-%CALCNORMALIZEDPATHCOORDS Calculate inerital path co-ordinates
+%CALCNORMALIZEDPATHCOORDS(pathWidth,pathHeight,pathElevation,pathParameter)
+% Calculate inerital path co-ordinates
 % Inputs:   Path width [deg]
 %           Path height [deg]
 %           Path elevation [deg]
