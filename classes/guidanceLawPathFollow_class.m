@@ -10,6 +10,10 @@ classdef guidanceLawPathFollow_class
         kiteMass(1,1) double {mustBePositive} = 1
         maxTanRoll_deg(1,1) double {mustBePositive} = 30
         initPathParameter(1,1) double {mustBeNonnegative} = 0
+        % aileron controller gains
+        aileron_kp(1,1) double {mustBeNonnegative} = 1
+        aileron_kd(1,1) double {mustBeNonnegative} = 0
+        aileron_tau(1,1) double {mustBePositive} = 0.1
     end
     
     methods
