@@ -3,21 +3,22 @@ classdef guidanceLawPathFollow_class
     %   Detailed explanation goes here
     
     properties
-        Property1
+        pathWidth_deg(1,1) double {mustBePositive} = 40
+        pathHeight_deg(1,1) double {mustBePositive} = 12
+        pathElevation_deg(1,1) double = 30
+        normalizedLforward(1,1) double {mustBeNonnegative,mustBeLessThanOrEqual(normalizedLforward,0.25)} = 0.05
+        kiteMass(1,1) double {mustBePositive} = 1
+        maxTanRoll_deg(1,1) double {mustBePositive} = 30
+        initPathParameter(1,1) double {mustBeNonnegative} = 0
     end
     
     methods
-        function obj = guidanceLawPathFollow_class(inputArg1,inputArg2)
-            %GUIDANCELAWPATHFOLLOW_CLASS Construct an instance of this class
-            %   Detailed explanation goes here
-            obj.Property1 = inputArg1 + inputArg2;
-        end
         
-        function outputArg = method1(obj,inputArg)
-            %METHOD1 Summary of this method goes here
-            %   Detailed explanation goes here
-            outputArg = obj.Property1 + inputArg;
-        end
+        %% set methods
+        % normalizedLforward
+%         function obj = set.normalizedLforward(obj,val)
+%             obj.normalizedLforward = val;
+%         end
     end
 end
 
