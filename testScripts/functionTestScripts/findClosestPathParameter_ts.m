@@ -52,7 +52,7 @@ kiteMass = 10;
 maxTanRoll_deg = 30;
 
 desTanRoll = calcDesTanRollAng(f_kitePos,f_kiteVel,...
-    rTarget,turnAng,netWingLift,kiteMass,maxTanRoll_deg);
+    rTarget,turnAng,netWingLift,kiteMass,maxTanRoll_deg)*180/pi;
 
 %% plots
 % plot line that connects kite position to target
