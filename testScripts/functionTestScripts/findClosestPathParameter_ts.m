@@ -42,6 +42,19 @@ kiteVel = kiteVel./norm(kiteVel);
 % calc turn angle
 turnAng = calcTurnAngleInTangentFrame(kitePos,kiteVel,rTarget);
 
+%% test desired tangent roll angle calculation
+% radius of instantanuous sphere
+sphereRad = 100;
+f_kitePos = sphereRad*kitePos;
+f_kiteVel = 10*kiteVel;
+netWingLift = 100;
+kiteMass = 10;
+maxTanRoll_deg = 30;
+
+desTanRoll = calcDesTanRollAng(f_kitePos,f_kiteVel,...
+    rTarget,turnAng,netWingLift,kiteMass,maxTanRoll_deg);
+
+%% plots
 % plot line that connects kite position to target
 prTarg_kite = plot3([kitePos(1) rTarget(1)],...
     [kitePos(2) rTarget(2)],...
